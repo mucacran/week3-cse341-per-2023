@@ -27,4 +27,24 @@ const getSingle = async (req, res, next) => {
   });
 };
 
-module.exports = { getAll, getSingle };
+const enviardatos = async (req, res)=>{
+  console.log(`Se acaba de ingresar ${req.body}`);
+  const result = await mongodb
+    .getDb()
+    .db('Test')
+    .collection('Contact')
+    .find({ _id: userId });
+    
+  collection.insert(req.body, (error, result) => {
+    if(error) {
+        return res.status(500).send(error);
+    }
+    res.send(result.result);
+  });
+}
+
+module.exports = {
+  getAll,
+  getSingle,
+  enviardatos
+};

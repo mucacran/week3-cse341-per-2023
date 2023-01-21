@@ -1,7 +1,19 @@
-GET http://localhost:8082/
+GET http://localhost:8080/
 ###
-GET http://localhost:8082/contacts
+GET http://localhost:8080/contacts
 ###
 GET https://week2-cse341.onrender.com
 ###
-GET http://localhost:8082/jokes
+GET http://localhost:8080/jokes
+###
+###
+POST http://localhost:8080/contacts 
+Content-Type: application/json
+
+{
+    "firstName":"loco3",
+    "lastName":"Sin apellido3",
+    "email": "fbravo@coco.com",
+    "favoriteColor": "rojito",
+    "birthday": "12/12/23"
+}
