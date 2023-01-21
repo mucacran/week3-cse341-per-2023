@@ -1,3 +1,7 @@
 node_modules
 .env
+<<<<<<< HEAD
 .rest
+=======
+.txt
+>>>>>>> 5ead2715c92e659dc9c23e59e09ceb7cdbef0873

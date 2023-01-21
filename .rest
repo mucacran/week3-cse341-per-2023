@@ -1,0 +1,8 @@
+GET http://localhost:8082/
+###
+
+GET http://localhost:8082/contacts
+###
+
+GET https://week2-cse341.onrender.com
+###
