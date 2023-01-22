@@ -2,21 +2,6 @@ GET http://localhost:8080/
 ###
 GET http://localhost:8080/contacts
 ###
-POST http://localhost:8080/contacts 
-Content-Type: application/json
-
-{
-    "firstName":"loco3",
-    "lastName":"Sin apellido3",
-    "email": "fbravo@coco.com",
-    "favoriteColor": "rojito",
-    "birthday": "12/12/23"
-}
-
-
-
-
-
 // LOCALHOST ### Get all contacts
 GET http://localhost:8080/contacts
 
@@ -36,7 +21,7 @@ content-type: application/json
 }
 
 ### PUT contact
-PUT http://localhost:8080/contacts/63cc91fe4e45792734dd0068 HTTP/1.1
+PUT http://localhost:8080/contacts/63cce256b5dca02fa5313dc6 HTTP/1.1
 content-type: application/json
 
 {
@@ -47,7 +32,7 @@ content-type: application/json
 "birthday":"12/12/20"
 }
 ### DELETE contact
-DELETE http://localhost:8080/contacts/63cc91fe4e45792734dd0068 HTTP/1.1
+DELETE http://localhost:8080/contacts/63cce4c680c65d8909f01aeb HTTP/1.1
 
 // PRODUCTION Deploy
 ### Get all contacts

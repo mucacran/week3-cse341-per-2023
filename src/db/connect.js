@@ -36,11 +36,11 @@ module.exports = {
 
 
 /*
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://el_mucacran_rasta:fXyC3iiBL3dq4Hs@cluster0.w4yyxxg.mongodb.net/?retryWrites=true&w=majority";
+const { ServerApiVersion } = require('mongodb');
+const uri = process.env.contras_URI;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
-  const collection = client.db("test").collection("devices");
+  const collection = client.db("Test").collection("Contact");
   // perform actions on the collection object
   client.close();
 });*/

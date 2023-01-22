@@ -1,6 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
+
 //imprime por pantalla todo lo que esta en la base de datos
 const getAll = async (req, res, next) => {
   const result = await mongodb
@@ -73,8 +74,14 @@ const updateContact = async (req, res) => {
 };
 
 const deleteContact = async (req, res) => {
+  console.log(`Se acaba de ingresar ${req.body}`);
   const userId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db('Test').collection('Contact').deleteOne({ _id: userId }, true);
+  const response = await mongodb
+  .getDb()
+  .db('Test')
+  .collection('Contact')
+  .deleteOne({ _id: userId });
+
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
