@@ -58,4 +58,4 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE https://week3-cse341-per-2023.onrender.com/contacts/6220e34083149913680f9a64 HTTP/1.1
+DELETE https://week3-cse341-per-2023.onrender.com/contacts/63c0c4994235c44b040a897f HTTP/1.1
