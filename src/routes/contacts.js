@@ -24,4 +24,8 @@ router.post('/respaldo/', (req, res) => {
 
 router.post('/',contactsController.enviardatos);
 
+router.put('/:id', contactsController.updateContact);
+
+router.delete('/:id', contactsController.deleteContact);
+
 module.exports = router;

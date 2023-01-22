@@ -2,11 +2,6 @@ GET http://localhost:8080/
 ###
 GET http://localhost:8080/contacts
 ###
-GET https://week2-cse341.onrender.com
-###
-GET http://localhost:8080/jokes
-###
-###
 POST http://localhost:8080/contacts 
 Content-Type: application/json
 
@@ -17,3 +12,65 @@ Content-Type: application/json
     "favoriteColor": "rojito",
     "birthday": "12/12/23"
 }
+
+
+
+
+
+// LOCALHOST ### Get all contacts
+GET http://localhost:8080/contacts
+
+### Get contact by id
+GET http://localhost:8080/contacts/622023f642f9ab4cd6e060b3
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Ashley",
+"lastName":"Weaver",
+"email":"aWeaver@test.com",
+"favoriteColor":"Brown",
+"birthday":"06/19/2000"
+}
+
+### PUT contact
+PUT http://localhost:8080/contacts/63cc91fe4e45792734dd0068 HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Sarah",
+"lastName":"Birch",
+"email":"test@gmail.com",
+"favoriteColor":"Green",
+"birthday":"12/12/20"
+}
+### DELETE contact
+DELETE http://localhost:8080/contacts/63cc91fe4e45792734dd0068 HTTP/1.1
+
+// PRODUCTION Deploy
+### Get all contacts
+GET https://cse341-instructor.renderXXX.com/contacts
+
+###Get contact by id
+GET https://cse341-instructor.renderXXX.com/contacts/622023f642f9ab4cd6e060b3
+
+###Create contact
+POST https://cse341-instructor.renderXXX.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Ashley", "lastName":"Weaver", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
+}
+
+### PUT contact
+PUT https://cse341-instructor.renderXXX.com/contacts/6220bcb39cd507e920c75a0b HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Sarah","lastName":"Birch", "email":"sarahB@gmail.com", "favoriteColor":"Yellow", "birthday":"06/12/20"
+}
+
+### DELETE contact
+DELETE https://cse341-instructor.renderXXX.com/contacts/6220e34083149913680f9a64 HTTP/1.1
