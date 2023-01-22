@@ -13,7 +13,7 @@ POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Ashley",
+"firstName":"locoquisimo",
 "lastName":"Weaver",
 "email":"aWeaver@test.com",
 "favoriteColor":"Brown",

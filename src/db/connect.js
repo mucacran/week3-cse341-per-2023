@@ -1,15 +1,27 @@
 const dotenv = require('dotenv');
 dotenv.config();
-const MongoClient = require('mongodb').MongoClient;
+//const MongoClient = require('mongodb').MongoClient;
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
 let _db;
+const uri = process.env.contras_URI;
+/*
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = process.env.contras_URI;
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+*/
 
 const initDb = (callback) => {
   if (_db) {
     console.log('Db is already initialized!');
     return callback(null, _db);
   }
-  MongoClient.connect(process.env.contras_URI)
+  MongoClient.connect(uri)
     .then((client) => {
       _db = client;
       callback(null, _db);
@@ -30,17 +42,3 @@ module.exports = {
   initDb,
   getDb,
 };
-
-
-
-
-
-/*
-const { ServerApiVersion } = require('mongodb');
-const uri = process.env.contras_URI;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  const collection = client.db("Test").collection("Contact");
-  // perform actions on the collection object
-  client.close();
-});*/
